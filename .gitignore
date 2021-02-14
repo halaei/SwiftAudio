@@ -159,3 +159,5 @@ xcuserdata
 
 # End of https://www.gitignore.io/api/git,xcode,swift,macos,carthage,objective-c,swiftpackagemanager
 
+/Example/Pods
+.idea

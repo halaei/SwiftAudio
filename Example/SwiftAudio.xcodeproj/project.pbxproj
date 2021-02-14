@@ -306,7 +306,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = HPNZWPB9JK;
+						DevelopmentTeam = 884Q7G49PG;
 						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -316,7 +316,7 @@
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = HPNZWPB9JK;
+						DevelopmentTeam = 884Q7G49PG;
 						LastSwiftMigration = 1020;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -377,7 +377,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftAudio_Example/Pods-SwiftAudio_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftAudio_Example/Pods-SwiftAudio_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SwiftAudio/SwiftAudio.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -386,7 +386,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftAudio_Example/Pods-SwiftAudio_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftAudio_Example/Pods-SwiftAudio_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C4E47F65B92DC5B5624F9482 /* [CP] Check Pods Manifest.lock */ = {
@@ -413,7 +413,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftAudio_Tests/Pods-SwiftAudio_Tests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftAudio_Tests/Pods-SwiftAudio_Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
@@ -424,7 +424,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftAudio_Tests/Pods-SwiftAudio_Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftAudio_Tests/Pods-SwiftAudio_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F22DFA58013500305552C406 /* [CP] Check Pods Manifest.lock */ = {
@@ -623,12 +623,12 @@
 			baseConfigurationReference = C344B34C66182CD1C5AD6DD2 /* Pods-SwiftAudio_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HPNZWPB9JK;
+				DEVELOPMENT_TEAM = 884Q7G49PG;
 				INFOPLIST_FILE = SwiftAudio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.SwiftAudio-Example-h";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -640,12 +640,12 @@
 			baseConfigurationReference = CAD65BC49F7B60C24AB20FDA /* Pods-SwiftAudio_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HPNZWPB9JK;
+				DEVELOPMENT_TEAM = 884Q7G49PG;
 				INFOPLIST_FILE = SwiftAudio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.SwiftAudio-Example-h";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -656,7 +656,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 521F3AEC1228A2FA2637355F /* Pods-SwiftAudio_Tests.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = HPNZWPB9JK;
+				DEVELOPMENT_TEAM = 884Q7G49PG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -678,7 +678,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C4C4423F4BAFCE03507BC386 /* Pods-SwiftAudio_Tests.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = HPNZWPB9JK;
+				DEVELOPMENT_TEAM = 884Q7G49PG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

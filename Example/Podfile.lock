@@ -1,7 +1,11 @@
 PODS:
   - Nimble (8.0.9)
   - Quick (2.0.0)
-  - SwiftAudio (0.11.2)
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
+  - SwiftAudio (0.11.2):
+    - SQLite.swift (~> 0.12.0)
 
 DEPENDENCIES:
   - Nimble (~> 8.0.0)
@@ -12,6 +16,7 @@ SPEC REPOS:
   trunk:
     - Nimble
     - Quick
+    - SQLite.swift
 
 EXTERNAL SOURCES:
   SwiftAudio:
@@ -20,7 +25,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
   Quick: ce1276c7c27ba2da3cb2fd0cde053c3648b3b22d
-  SwiftAudio: 217f5f184b27a0e25ff0fe7647021f05a21c06c9
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
+  SwiftAudio: a3deb9cce353de3fe966b84d6ea68f483e2f7114
 
 PODFILE CHECKSUM: 08ea4075437f8ff3c4f84ed70827a8132461373f
 

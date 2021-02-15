@@ -22,7 +22,7 @@ protocol Cache {
     ///
     ///
     /// - Returns: the total disk space in bytes used by the cache.
-    func getCacheSpace() -> UInt64;
+    func getCacheSpace() -> Int64;
 
     /**
      * A caller should invoke this method when they require data starting from a given position in a
@@ -53,14 +53,14 @@ protocol Cache {
      - Throws: InterruptedException If the thread was interrupted.
                CacheException If an error is encountered.
      */
-    func startReadWrite(key: String, position: UInt64, length: UInt64?) throws -> CacheSpan;
+    func startReadWrite(key: String, position: Int64, length: Int64?) throws -> CacheSpan;
 
     /**
      Same as startReadWrite. However, if the cache entry is locked,
      then instead of blocking, this method will return nil.
      - Returns: The CacheSpan. Or nil if the cache entry is locked.
      */
-    func startReadWriteNonBlocking(key: String, position: UInt64, length: UInt64?) throws -> CacheSpan?;
+    func startReadWriteNonBlocking(key: String, position: Int64, length: Int64?) throws -> CacheSpan?;
 
     /**
      * Obtains a cache file into which data can be written. Must only be called when holding a
@@ -75,7 +75,7 @@ protocol Cache {
      - Returns: The file into which data should be written.
      - Throws: CacheException If an error is encountered.
      */
-    func startFile(key: String, position: UInt64, length: UInt64?) throws -> FileHandle;
+    func startFile(key: String, position: Int64, length: Int64?) throws -> FileHandle;
 
     /**
      * Commits a file into the cache. Must only be called when holding a corresponding hole {@link
@@ -89,7 +89,7 @@ protocol Cache {
        - length: The length of the newly written cache file in bytes.
      - Throws: CacheException If an error is encountered.
      */
-    func commitFile(file: FileHandle, length: UInt64) throws;
+    func commitFile(file: FileHandle, length: Int64) throws;
 
     /**
      * Releases a CacheSpan obtained from startReadWrite which
@@ -121,7 +121,7 @@ protocol Cache {
        - length: The length of the data.
      - Returns: true if the data is available in the Cache otherwise false;
      */
-    func isCached(key: String, position: UInt64, length: UInt64) -> Bool;
+    func isCached(key: String, position: Int64, length: Int64) -> Bool;
 
     /**
      * Returns the length of continuously cached data starting from position, up to a maximum
@@ -133,10 +133,10 @@ protocol Cache {
        - key: The cache key of the resource.
        - position: The starting position of the data in the resource.
        - length: The maximum length of the data or hole to be returned. nil is
-            permitted, and is equivalent to passing UINT64_MAX.
+            permitted, and is equivalent to passing INT64_MAX.
      - Returns: The length of the continuously cached data, or -holeLength if position isn't cached.
      */
-    func getCachedLength(key: String, position: UInt64, length: UInt64?) -> Int64;
+    func getCachedLength(key: String, position: Int64, length: Int64?) -> Int64;
 
     /**
      Returns the total number of cached bytes between {@code position} (inclusive) and {@code
@@ -146,8 +146,8 @@ protocol Cache {
        - key: The cache key of the resource.
        - position: The starting position of the data in the resource.
        - length: The length of the data to check. nil is permitted, and is
-           equivalent to passing UINT64_MAX.
+           equivalent to passing INT64_MAX.
       - Returns: The total number of cached bytes.
      */
-    func getCachedBytes(key: String, position: UInt64, length: UInt64) -> UInt64;
+    func getCachedBytes(key: String, position: Int64, length: Int64) -> Int64;
 }

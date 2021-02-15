@@ -5,6 +5,12 @@
 import Foundation
 
 class SimpleCache: Cache {
+    fileprivate var maxBytes: Int64;
+
+    init(maxBytes: Int64) {
+        self.maxBytes = maxBytes
+    }
+
     func release() {
         // todo
     }
@@ -72,4 +78,19 @@ class SimpleCache: Cache {
         return 0;
     }
 
+    func evict() {
+        var bytes = getCacheSpace();
+        while (bytes > maxBytes) {
+            let span = SpanModel.lru();
+            if (span == nil) {
+                return;
+            }
+            bytes -= SpanModel.delete(span: span!);
+        }
+    }
+
+    func setSpaceLimit(bytes: Int64) {
+        maxBytes = bytes;
+        evict();
+    }
 }

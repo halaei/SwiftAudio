@@ -18,6 +18,17 @@ class SpanModel {
         return Array(try! Database.getInstance().open().prepare(table.filter(name.like("\(resourceId).%"))));
     }
 
+    static func lru() -> Row? {
+        try! Database.getInstance().open().pluck(table.order(last_touch_timestamp.desc))
+    }
+
+    static func delete(span: Row) -> Int64 {
+        // 1. delete file
+        // 2. delete database record
+        try! Database.getInstance().open().run(table.filter(name == span[name]).delete())
+        return span[length]
+    }
+
     static func hydrate(row: Row, key: String) -> CacheSpan {
         let regex = try? NSRegularExpression(pattern: "^(\\d+)\\.(\\d+)\\.(\\d+)\\.media$");
         let match = regex?.firstMatch(in: row[name], range: NSRange(0..<row[name].utf16.count))

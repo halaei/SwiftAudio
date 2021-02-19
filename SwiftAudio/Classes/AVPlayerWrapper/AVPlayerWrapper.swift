@@ -9,6 +9,7 @@
 import Foundation
 import AVFoundation
 import MediaPlayer
+import DVAssetLoaderDelegate
 
 public enum PlaybackEndedReason: String {
     case playedUntilEnd
@@ -37,7 +38,7 @@ class AVPlayerWrapper: AVPlayerWrapperProtocol {
      */
     fileprivate var _playWhenReady: Bool = true
     fileprivate var _initialTime: TimeInterval?
-    
+    fileprivate var loadDelegate: AssetLoaderDelegate?
     fileprivate var _state: AVPlayerWrapperState = AVPlayerWrapperState.idle {
         didSet {
             if oldValue != _state {
@@ -77,7 +78,7 @@ class AVPlayerWrapper: AVPlayerWrapperProtocol {
         return avPlayer.currentItem
     }
     
-    var _pendingAsset: AVAsset? = nil
+    var _pendingAsset: DVURLAsset? = nil
     
     var automaticallyWaitsToMinimizeStalling: Bool {
         get { return avPlayer.automaticallyWaitsToMinimizeStalling }
@@ -178,8 +179,9 @@ class AVPlayerWrapper: AVPlayerWrapperProtocol {
             recreateAVPlayer()
         }
         
-        self._pendingAsset = AVURLAsset(url: url, options: options)
-        
+        self._pendingAsset = DVURLAsset(url: url, options: options)
+        self.loadDelegate = AssetLoaderDelegate(url: self._pendingAsset!)
+        self._pendingAsset?.loaderDelegate = self.loadDelegate
         if let pendingAsset = _pendingAsset {
             self._state = .loading
             pendingAsset.loadValuesAsynchronously(forKeys: [Constants.assetPlayableKey], completionHandler: { [weak self] in

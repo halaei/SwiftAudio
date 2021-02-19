@@ -1,10 +1,12 @@
 PODS:
+  - DVAssetLoaderDelegate (0.3.3)
   - Nimble (8.0.9)
   - Quick (2.0.0)
   - SQLite.swift (0.12.2):
     - SQLite.swift/standard (= 0.12.2)
   - SQLite.swift/standard (0.12.2)
   - SwiftAudio (0.11.2):
+    - DVAssetLoaderDelegate
     - SQLite.swift (~> 0.12.0)
 
 DEPENDENCIES:
@@ -14,6 +16,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - DVAssetLoaderDelegate
     - Nimble
     - Quick
     - SQLite.swift
@@ -23,10 +26,11 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  DVAssetLoaderDelegate: 0caec20e4e08b8560b691131539e9180024d4bce
   Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
   Quick: ce1276c7c27ba2da3cb2fd0cde053c3648b3b22d
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
-  SwiftAudio: a3deb9cce353de3fe966b84d6ea68f483e2f7114
+  SwiftAudio: e3d4a94df3d94537a7d512ecc11604e97b5fc55a
 
 PODFILE CHECKSUM: 08ea4075437f8ff3c4f84ed70827a8132461373f
 

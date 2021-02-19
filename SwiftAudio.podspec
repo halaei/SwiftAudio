@@ -23,4 +23,5 @@ DESC
   s.swift_version = '5.0'
   s.source_files = 'SwiftAudio/Classes/**/*'
   s.dependency 'SQLite.swift', '~> 0.12.0'
+  s.dependency 'DVAssetLoaderDelegate'
 end

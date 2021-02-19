@@ -37,6 +37,7 @@
 		078C908F210D263200555E80 /* AVPlayerItemObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078C908D210D25F700555E80 /* AVPlayerItemObserverTests.swift */; };
 		07DBB1E1212C17E600BB4278 /* QueuedAudioPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBB1E0212C17E600BB4278 /* QueuedAudioPlayerTests.swift */; };
 		07EB8EE2222869B2000197DE /* NowPlayingInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EB8EE022286980000197DE /* NowPlayingInfoTests.swift */; };
+		5E74A3CD0A320CFCACFAA959 /* a.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5E74A69574D89B5109A51ACC /* a.txt */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -82,6 +83,7 @@
 		07DBB1E0212C17E600BB4278 /* QueuedAudioPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueuedAudioPlayerTests.swift; sourceTree = "<group>"; };
 		07EB8EE022286980000197DE /* NowPlayingInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingInfoTests.swift; sourceTree = "<group>"; };
 		521F3AEC1228A2FA2637355F /* Pods-SwiftAudio_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftAudio_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftAudio_Tests/Pods-SwiftAudio_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		5E74A69574D89B5109A51ACC /* a.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = a.txt; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SwiftAudio_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftAudio_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				5E74A69574D89B5109A51ACC /* a.txt */,
 			);
 			name = "Example for SwiftAudio";
 			path = SwiftAudio;
@@ -354,6 +357,7 @@
 				070713102067F40A00F789B3 /* QueueTableViewCell.xib in Resources */,
 				07732654205ECA8B00C4D1CD /* WAV-MP3.wav in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				5E74A3CD0A320CFCACFAA959 /* a.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,11 +382,13 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SwiftAudio_Example/Pods-SwiftAudio_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DVAssetLoaderDelegate/DVAssetLoaderDelegate.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftAudio/SwiftAudio.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DVAssetLoaderDelegate.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftAudio.framework",
 			);
